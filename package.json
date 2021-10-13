@@ -2,7 +2,7 @@
   "license": "WTFPL",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html --public-url ./"
   },
   "devDependencies": {
     "parcel": "^1.12.4",

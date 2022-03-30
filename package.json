@@ -1,12 +1,12 @@
 {
   "license": "WTFPL",
+  "source": "./src/index.html",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url ./"
+    "start": "parcel",
+    "build": "parcel build"
   },
   "devDependencies": {
-    "parcel": "^1.12.4",
-    "rimraf": "^3.0.2",
-    "sass": "^1.42.1"
+    "@parcel/transformer-sass": "2.4.0",
+    "parcel": "^2.4.0"
   }
 }

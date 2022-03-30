@@ -37,18 +37,15 @@ const leave = () => {
   const w = window.innerWidth,
     h = window.innerHeight;
   const z = (to.x - from.x) * (h / 2 - to.y) - (to.y - from.y) * (w / 2 - to.x);
-  const dist = Math.sqrt((to.y - from.y) ** 2 + (to.x - from.x) ** 2);
+  const dist = Math.hypot((to.y - from.y), (to.x - from.x));
 
-  velocity += (z / Math.abs(z)) * ((dist / Math.sqrt(w ** 2 + h ** 2)) * 0.125);
+  velocity += Math.sign(z) * ((dist / Math.hypot(w, h)) * 0.125);
   from = null;
   to = null;
 };
 
 const tick = () => {
-  velocity +=
-    (velocity !== 0 ? -velocity / Math.abs(velocity) : 0) *
-    Math.abs(velocity) *
-    0.025;
+  velocity += -velocity * 0.025;
 
   turn += velocity;
 

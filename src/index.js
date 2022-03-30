@@ -37,7 +37,7 @@ const leave = () => {
   const w = window.innerWidth,
     h = window.innerHeight;
   const z = (to.x - from.x) * (h / 2 - to.y) - (to.y - from.y) * (w / 2 - to.x);
-  const dist = Math.hypot((to.y - from.y), (to.x - from.x));
+  const dist = Math.hypot(to.y - from.y, to.x - from.x);
 
   velocity += Math.sign(z) * ((dist / Math.hypot(w, h)) * 0.125);
   from = null;

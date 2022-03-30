@@ -1,4 +1,25 @@
+# Dependencies
 node_modules/
+
+package-lock.json
+pnpm-lock.ymal
+
+# Log
+*.log
+
+# Environment
+.env.*.local
+
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+
+# ESLint
+.eslintcache
+
+# Parcel
 .cache/
+.parcel-cache/
+
+# Output
 dist/
-.vscode/settings.json
